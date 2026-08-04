@@ -24,9 +24,10 @@ A responsive web application that provides real-time weather updates, multi-day 
 Navigate to the project folder:
 
 Bash
+```
 cd Weather-dashboard
 Open the application:
-
+```
 Simply open index.html in your web browser.
 
 Alternatively, serve it using VS Code's Live Server extension.
@@ -37,8 +38,10 @@ Obtain a free API key from OpenWeatherMap.
 Open your JavaScript configuration file (e.g., app.js or config.js).
 
 Add your key:
-
+```
 JavaScript
 const API_KEY = "YOUR_API_KEY_HERE";
+```
+
 📄 License
 This project is open-source and available under the MIT License.
