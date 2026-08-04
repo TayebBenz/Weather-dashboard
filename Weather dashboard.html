@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <!-- Search Section -->
+    <section class="search-section" aria-label="City search">
+      <form id="search-form" class="search-form" role="search">
+        <label for="city-input" class="visually-hidden">Enter city name</label>
+        <input 
+          type="search" 
+          id="city-input" 
+          name="city" 
+          placeholder="Search for a city..." 
+          required 
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </section>
+
+    <!-- Current Weather Section -->
+    <section class="current-weather" aria-label="Current weather" id="current-weather-section" hidden>
+      <h2 id="city-name" tabindex="-1">City Name</h2>
+      <div class="weather-card">
+        <p class="temperature" id="temperature">--°C</p>
+        <p class="condition" id="condition">--</p>
+        <div class="details">
+          <p>Wind: <span id="wind-speed">--</span> km/h</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forecast Section -->
+    <section class="forecast" aria-label="5-day forecast" id="forecast-section" hidden>
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-grid" id="forecast-grid">
+        <!-- Forecast cards injected here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
